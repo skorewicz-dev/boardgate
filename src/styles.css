@@ -5,7 +5,11 @@
     box-sizing: border-box;
     font-family: Calibri;
     user-select: none;
+
 }
 body{
     background: url('https://i.pinimg.com/736x/7e/88/46/7e884645c30fa18498a520edc82923ea--dungeon-tiles-tuile.jpg');
+}
+html, body{
+    height: 100%;
 }
