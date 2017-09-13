@@ -20,6 +20,11 @@
                 0px 0px 5px 0px white inset;
 }
 
+.article{
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+}
 button{
     cursor: pointer;
     background: linear-gradient( to left,
