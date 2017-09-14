@@ -1,7 +1,7 @@
 $(document).ready(function(){
     // Path to images folder
-    var folder1 = "./gfx/motoryzacja/";
-    var folder2 = "./gfx/militaria/";
+    var folder1 = "gfx/motoryzacja/";
+    var folder2 = "gfx/militaria/";
     // Make ajax call for images
     $.ajax({
         // From
@@ -9,13 +9,13 @@ $(document).ready(function(){
         // If call is successful (directory can be read)
         success: function (data) {
             // Get all files (ajax sees them as anchor object with href)
-            $(data).find("a").attr("href", function (i, val) {
-                // If the file is an image
-                if( val.match(/\.(jpe?g|png|gif)$/) ) {
+            data.forEach(function(element) {
+                if( element.match(/\.(jpe?g|png|gif)$/) ) {
                     // Add it in the proper place on the page 
-                    $("#motoryzacjaPage").append( "<img class=\"flyingImage\" src='"+ folder1 + val +"'>" );
-                } 
-            });
+                    $("#motoryzacjaPage").append( "<img class=\"flyingImage\" src='"+ folder1 + element +"'>" );
+                }
+            }, this);
+                
         }
     });
 
@@ -25,13 +25,13 @@ $(document).ready(function(){
         // If call is successful (directory can be read)
         success: function (data) {
             // Get all files (ajax sees them as anchor object with href)
-            $(data).find("a").attr("href", function (i, val) {
-                // If the file is an image
-                if( val.match(/\.(jpe?g|png|gif)$/) ) {
+            data.forEach(function(element) {
+                if( element.match(/\.(jpe?g|png|gif)$/) ) {
                     // Add it in the proper place on the page 
-                    $("#militariaPage").append( "<img class=\"flyingImage\" src='"+ folder2 + val +"'>" );
-                } 
-            });
+                    $("#militariaPage").append( "<img class=\"flyingImage\" src='"+ folder2 + element +"'>" );
+                }
+            }, this);
+                
         }
     });
 
