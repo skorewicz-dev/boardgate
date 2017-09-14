@@ -1,7 +1,7 @@
 $(document).ready(function(){
     // Path to images folder
-    var folder1 = "gfx/motoryzacja/";
-    var folder2 = "gfx/militaria/";
+    var folder1 = "./gfx/motoryzacja/";
+    var folder2 = "./gfx/militaria/";
     // Make ajax call for images
     $.ajax({
         // From
