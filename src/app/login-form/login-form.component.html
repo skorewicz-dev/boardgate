@@ -1,6 +1,7 @@
 <div id="container">
   <p class="title">Login</p>
   <input type="text" #login placeholder="login"/>
-  <input type="text" #password placeholder="password"/>
+  <input type="password" #password placeholder="password"/>
   <button class="menu" id="loginButton" (click)="login(login.value, password.value)">Login</button>
+  <button class="menu short" id="loginButton" routerLink="/welcome" routerLinkActive="active">Back</button>
 </div>

@@ -55,7 +55,7 @@ button:hover{
     color: orange;
     text-shadow: 0px 0px 1px white;
 }
-input[type="text"]{
+input[type="text"], input[type="password"]{
     text-align: center;
     background: white;
     transition: all 0.5s;
@@ -71,6 +71,18 @@ input[type="text"]{
     box-shadow:  0px 0px 3px black,
                  0px 2px 5px black;
 }
-input[type="text"]::-webkit-input-placeholder{
+input::-webkit-input-placeholder{
     color: lightgray;
+}
+
+input::-moz-placeholder{
+    color: lightgray;
+}
+
+input:-ms-input-placeholder{
+    color: lightgray;
+}
+
+.short{
+    width: 100px !important;
 }
