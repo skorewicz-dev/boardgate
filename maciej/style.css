@@ -1,0 +1,951 @@
+@font-face{
+    src: url("./gfx/Guns1.ttf") format('truetype');
+    font-family: "guns";
+}
+@font-face{
+    src: url("./gfx/old_car.ttf") format('truetype');
+    font-family: "cars";
+}
+
+*,html {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: lightgray;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.container{
+    /* W3C Markup */ 
+    height: 100vh;
+    background: rgba(255,255,255,1);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,1)), color-stop(88%, rgba(0,0,0,1)), color-stop(100%, rgba(0,0,0,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 88%, rgba(0,0,0,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 88%, rgba(0,0,0,1) 100%);
+    background: -webkit-radial-gradient(center, ellipse, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 88%, rgba(0,0,0,1) 100%);
+    background: -o-radial-gradient(center, ellipse, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 88%, rgba(0,0,0,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 88%, rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=1 );
+    background-attachment: fixed;
+}
+.cont100{
+    position: absolute;
+    top: 0px; left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    display: block;
+    z-index: 990;
+}
+.content{
+    max-width: 1070px;
+    background-color: rgba(0,0,0,0.8);
+    -webkit-box-shadow: inset 0px 0px 5px white;
+            box-shadow: inset 0px 0px 5px white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+}
+.head{
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50px;
+            flex: 0 1 50px;
+    position: fixed;
+    top: 0;
+    width: 83.33%;
+    max-width: 1070px;
+}
+.header{
+    color: #e6e6e6;
+    font-variant: small-caps;
+    background-color: black;
+    height: 62px;
+    text-decoration: none;
+}
+.header h1, .header h3{
+    padding-left:20px;
+}
+nav{
+    height: 62px;
+    background-color: black;
+    -webkit-box-shadow: 0px 5px 20px #000000;
+            box-shadow: 0px 5px 20px #000000;
+    border-top-right-radius: 10px;
+}
+nav a{
+    width: 33.33%;
+    float:right;
+    text-decoration: none;
+    color: lightgray;
+    text-align: center;
+    height: 100%;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+nav a:hover{
+    background: -webkit-gradient(linear,
+        left top, left bottom,
+        from(rgba(0,0,0,0.8)),
+        to(gray));
+    background: -webkit-linear-gradient(top,
+        rgba(0,0,0,0.8),
+        gray);
+    background: -o-linear-gradient(top,
+        rgba(0,0,0,0.8),
+        gray);
+    background: linear-gradient(to bottom,
+        rgba(0,0,0,0.8),
+        gray);
+}
+.hidden{
+    display: none;
+}
+::-webkit-scrollbar {
+   display: none;
+}
+@media only screen and (min-width: 1270px) {
+    .content{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #militariaGalleryButton > a {
+        background-image: url("gfx/rozmyte/bt65tuning_60.png");
+    }
+    #motoryzacjaGalleryButton > a {
+        background-image: url("gfx/rozmyte/DSC_0036 (2)_60.png");
+    }
+}
+@media only screen and (min-width: 1150px) {
+    .col-1  {width:   8.33%; padding:0;}
+	.col-2  {width:  16.66%; padding:0;}
+	.col-3  {width:  25.00%; padding:0;}
+	.col-4  {width:  33.33%; padding:0;}
+	.col-5  {width:  41.66%; padding:0;}
+	.col-6  {width:  50.00%; padding:0;}
+	.col-7  {width:  58.33%; padding:0;}
+	.col-8  {width:  66.66%; padding:0;}
+	.col-9  {width:  75.00%; padding:0;}
+	.col-10 {width:  83.33%; padding:0;}
+	.col-11 {width:  91.66%; padding:0;}
+    .col-12 {width: 100.00%; padding:0;}
+    
+    #indexPage{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        height: 30vh;
+    }
+    #indexPage a{
+        text-decoration: none;
+        text-align: center;
+        font-variant: small-caps;   
+        width: 100%;
+        opacity: 0;
+        -webkit-animation-name: indexTitle;
+                animation-name: indexTitle;
+        -webkit-animation-duration: 3s;
+                animation-duration: 3s;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+    }
+    @-webkit-keyframes indexTitle {
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    @keyframes indexTitle {
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    #indexPage h1{
+        font-size: 80px;
+    }
+    #indexPage h3{
+        font-size: 30px;
+    }
+    .galleryButton{
+        padding: 3px;
+        padding-top:10vh;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-animation: fade_in 2s 1s forwards;
+                animation: fade_in 2s 1s forwards; 
+        opacity: 0;
+    }
+    @-webkit-keyframes fade_in{
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    @keyframes fade_in{
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    .galleryButton > a{
+        height: 22.86vw;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        -webkit-box-shadow: 0 0 28px 18px rgba(0,0,0,0.7) inset;
+                box-shadow: 0 0 28px 18px rgba(0,0,0,0.7) inset;
+        text-decoration: none;
+    }
+    .galleryButton > a > p{
+        text-align: center;   
+        line-height: 22.86vw;
+        font-size: 24px;
+        font-weight: normal;
+    }
+    .galleryButton > a:hover > p{
+        font-weight: bold;
+    }
+    #militariaGalleryButton > a {
+        background-image: url("gfx/rozmyte/bt65tuning_60.png");
+    }
+    #motoryzacjaGalleryButton > a {
+        background-image: url("gfx/rozmyte/DSC_0036 (2)_60.png");
+    }
+    nav a{
+        font-size: 20px;
+        line-height: 62px;
+    }
+}
+@media only screen and (max-width: 1150px) {
+    .col-a-1  {width:   8.33%; padding:0;}
+	.col-a-2  {width:  16.66%; padding:0;}
+	.col-a-3  {width:  25.00%; padding:0;}
+	.col-a-4  {width:  33.33%; padding:0;}
+	.col-a-5  {width:  41.66%; padding:0;}
+	.col-a-6  {width:  50.00%; padding:0;}
+	.col-a-7  {width:  58.33%; padding:0;}
+	.col-a-8  {width:  66.66%; padding:0;}
+	.col-a-9  {width:  75.00%; padding:0;}
+	.col-a-10 {width:  83.33%; padding:0;}
+	.col-a-11 {width:  91.66%; padding:0;}
+    .col-a-12 {width: 100.00%; padding:0;}
+    
+    #indexPage{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        height: 30vh;
+        min-height: 140px;
+    }
+    #indexPage a{
+        text-decoration: none;
+        text-align: center;
+        font-variant: small-caps;   
+        width: 100%;
+        opacity: 0;
+        -webkit-animation-name: indexTitle;
+                animation-name: indexTitle;
+        -webkit-animation-duration: 3s;
+                animation-duration: 3s;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+    }
+    @-webkit-keyframes indexTitle {
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    @keyframes indexTitle {
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    #indexPage h1{
+        font-size: 80px;
+    }
+    #indexPage h3{
+        font-size: 30px;
+    }
+    #militariaGalleryButton > a {
+        background-image: url("gfx/rozmyte/bt65tuning_60.png");
+    }
+    #motoryzacjaGalleryButton > a {
+        background-image: url("gfx/rozmyte/DSC_0036 (2)_60.png");
+    }
+    .galleryButton{
+        padding: 3px;
+        padding-top:10vh;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-animation: fade_in 2s 1s forwards;
+                animation: fade_in 2s 1s forwards; 
+        opacity: 0;
+    }
+    @-webkit-keyframes fade_in{
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    @keyframes fade_in{
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    .galleryButton > a{
+        height: 22.86vw;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        -webkit-box-shadow: 0 0 28px 18px rgba(0,0,0,0.7) inset;
+                box-shadow: 0 0 28px 18px rgba(0,0,0,0.7) inset;
+        text-decoration: none;
+    }
+    .galleryButton > a > p{
+        text-align: center;   
+        line-height: 22.86vw;
+        font-size: 24px;
+        font-weight: normal;
+    }
+    .galleryButton > a:hover > p{
+        font-weight: bold;
+    }
+    nav a{
+        font-size: 16px;
+        line-height: 62px;
+    }
+}
+@media only screen and (max-width: 900px) {
+.col-a-1  {width:   8.33%; padding:0;}
+	.col-a-2  {width:  16.66%; padding:0;}
+	.col-a-3  {width:  25.00%; padding:0;}
+	.col-a-4  {width:  33.33%; padding:0;}
+	.col-a-5  {width:  41.66%; padding:0;}
+	.col-a-6  {width:  50.00%; padding:0;}
+	.col-a-7  {width:  58.33%; padding:0;}
+	.col-a-8  {width:  66.66%; padding:0;}
+	.col-a-9  {width:  75.00%; padding:0;}
+	.col-a-10 {width:  83.33%; padding:0;}
+	.col-a-11 {width:  91.66%; padding:0;}
+    .col-a-12 {width: 100.00%; padding:0;}
+    
+    #indexPage{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        height: 30vh;
+    }
+    #indexPage a{
+        text-decoration: none;
+        text-align: center;
+        font-variant: small-caps;   
+        width: 100%;
+        opacity: 0;
+        -webkit-animation-name: indexTitle;
+                animation-name: indexTitle;
+        -webkit-animation-duration: 3s;
+                animation-duration: 3s;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+    }
+    @-webkit-keyframes indexTitle {
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    @keyframes indexTitle {
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    #indexPage h1{
+        font-size: 60px;
+    }
+    #indexPage h3{
+        font-size: 24px;
+    }
+    #militariaGalleryButton > a {
+        background-image: url("gfx/rozmyte/bt65tuning_60.png");
+    }
+    #motoryzacjaGalleryButton > a {
+        background-image: url("gfx/rozmyte/DSC_0036 (2)_60.png");
+    }
+    .galleryButton{
+        padding: 3px;
+        padding-top:7vh;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-animation: fade_in 2s 1s forwards;
+                animation: fade_in 2s 1s forwards; 
+        opacity: 0;
+    }
+    @-webkit-keyframes fade_in{
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    @keyframes fade_in{
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    .galleryButton > a{
+        height: 22.86vw;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        -webkit-box-shadow: 0 0 28px 18px rgba(0,0,0,0.7) inset;
+                box-shadow: 0 0 28px 18px rgba(0,0,0,0.7) inset;
+        text-decoration: none;
+    }
+    .galleryButton > a > p{
+        text-align: center;   
+        line-height: 22.86vw;
+        font-size: 24px;
+        font-weight: normal;
+    }
+    .galleryButton > a:hover > p{
+        font-weight: bold;
+    }
+    .header {
+        line-height: 31px;
+    }
+    .header h1{
+        font-size: 24px;
+    }
+    .header h3{
+        font-size: 16px;
+    }
+    nav a{
+        font-size: 16px;
+        line-height: 62px;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .col-b-1  {width:   8.33%; padding:0;}
+	.col-b-2  {width:  16.66%; padding:0;}
+	.col-b-3  {width:  25.00%; padding:0;}
+	.col-b-4  {width:  33.33%; padding:0;}
+	.col-b-5  {width:  41.66%; padding:0;}
+	.col-b-6  {width:  50.00%; padding:0;}
+	.col-b-7  {width:  58.33%; padding:0;}
+	.col-b-8  {width:  66.66%; padding:0;}
+	.col-b-9  {width:  75.00%; padding:0;}
+	.col-b-10 {width:  83.33%; padding:0;}
+	.col-b-11 {width:  91.66%; padding:0;}
+    .col-b-12 {width: 100.00%; padding:0;}
+    
+    #indexPage{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        height: 30vh;
+    }
+    #indexPage a{
+        text-decoration: none;
+        text-align: center;
+        font-variant: small-caps;   
+        width: 100%;
+        opacity: 0;
+        -webkit-animation-name: indexTitle;
+                animation-name: indexTitle;
+        -webkit-animation-duration: 3s;
+                animation-duration: 3s;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+    }
+    @-webkit-keyframes indexTitle {
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    @keyframes indexTitle {
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    #indexPage h1{
+        font-size: 60px;
+    }
+    #indexPage h3{
+        font-size: 24px;
+    }
+    #militariaGalleryButton {
+        
+    padding-bottom: 7vh;
+    }
+    #militariaGalleryButton > a {
+        background-image: url("gfx/rozmyte/bt65tuning_60.png");
+        height: 120px;
+    }
+    #motoryzacjaGalleryButton > a {
+        background-image: url("gfx/rozmyte/DSC_0036 (2)_60.png");
+        height: 120px;
+    }
+    .galleryButton{
+        padding: 3px;
+        padding-top:7vh;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-animation: fade_in 2s 1s forwards;
+                animation: fade_in 2s 1s forwards; 
+        opacity: 0;
+        margin-bottom: 10px;
+    }
+    @-webkit-keyframes fade_in{
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    @keyframes fade_in{
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    .galleryButton > a{
+        height: 120px;;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        -webkit-box-shadow: 0 0 28px 18px rgba(0,0,0,0.7) inset;
+                box-shadow: 0 0 28px 18px rgba(0,0,0,0.7) inset;
+        text-decoration: none;
+    }
+    .galleryButton > a > p{
+        text-align: center;   
+        line-height: 120px;;
+        font-size: 24px;
+        font-weight: normal;
+    }
+    .galleryButton > a:hover > p{
+        font-weight: bold;
+    }
+    .header {
+        line-height: 31px;
+    }
+    .header h1{
+        font-size: 24px;
+    }
+    .header h3{
+        font-size: 16px;
+    }
+    nav a{
+        font-size: 14px;
+        line-height: 62px;
+    }
+}
+@media only screen and (max-width: 545px) {
+    .col-c-1  {width:   8.33%; padding:0;}
+	.col-c-2  {width:  16.66%; padding:0;}
+	.col-c-3  {width:  25.00%; padding:0;}
+	.col-c-4  {width:  33.33%; padding:0;}
+	.col-c-5  {width:  41.66%; padding:0;}
+	.col-c-6  {width:  50.00%; padding:0;}
+	.col-c-7  {width:  58.33%; padding:0;}
+	.col-c-8  {width:  66.66%; padding:0;}
+	.col-c-9  {width:  75.00%; padding:0;}
+	.col-c-10 {width:  83.33%; padding:0;}
+	.col-c-11 {width:  91.66%; padding:0;}
+    .col-c-12 {width: 100.00%; padding:0;}
+    
+    #indexPage{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        height: 30vh;
+    }
+    #indexPage a{
+        text-decoration: none;
+        text-align: center;
+        font-variant: small-caps;   
+        width: 100%;
+        opacity: 0;
+        -webkit-animation-name: indexTitle;
+                animation-name: indexTitle;
+        -webkit-animation-duration: 3s;
+                animation-duration: 3s;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+    }
+    @-webkit-keyframes indexTitle {
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    @keyframes indexTitle {
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    #indexPage h1{
+        font-size: 40px;
+    }
+    #indexPage h3{
+        font-size: 24px;
+    }
+    #militariaGalleryButton {
+        
+    padding-bottom: 7vh;
+    }
+    #militariaGalleryButton > a {
+        background-image: url("gfx/rozmyte/bt65tuning_60.png");
+        height: 120px;
+    }
+    #motoryzacjaGalleryButton > a {
+        background-image: url("gfx/rozmyte/DSC_0036 (2)_60.png");
+        height: 120px;
+    }
+    .galleryButton{
+        padding: 3px;
+        padding-top:7vh;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-animation: fade_in 2s 1s forwards;
+                animation: fade_in 2s 1s forwards; 
+        opacity: 0;
+        margin-bottom: 10px;
+    }
+    @-webkit-keyframes fade_in{
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    @keyframes fade_in{
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    .galleryButton > a{
+        height: 120px;;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        -webkit-box-shadow: 0 0 28px 18px rgba(0,0,0,0.7) inset;
+                box-shadow: 0 0 28px 18px rgba(0,0,0,0.7) inset;
+        text-decoration: none;
+    }
+    .galleryButton > a > p{
+        text-align: center;   
+        line-height: 120px;;
+        font-size: 24px;
+        font-weight: normal;
+    }
+    .galleryButton > a:hover > p{
+        font-weight: bold;
+    }
+    .header {
+        line-height: 31px;
+    }
+    .header h1{
+        font-size: 24px;
+    }
+    .header h3{
+        font-size: 16px;
+    }
+    nav span{
+        display: none;
+    }
+    nav a:after{
+        line-height: 62px;
+    }
+    nav a:nth-child(1):after{
+        content: '🚗';
+    }
+    nav a:nth-child(2):after{
+        content: '🔫';
+    }
+    nav a:nth-child(3):after{
+        content: '✉️';
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .col-d-1  {width:   8.33%; padding:0;}
+	.col-d-2  {width:  16.66%; padding:0;}
+	.col-d-3  {width:  25.00%; padding:0;}
+	.col-d-4  {width:  33.33%; padding:0;}
+	.col-d-5  {width:  41.66%; padding:0;}
+	.col-d-6  {width:  50.00%; padding:0;}
+	.col-d-7  {width:  58.33%; padding:0;}
+	.col-d-8  {width:  66.66%; padding:0;}
+	.col-d-9  {width:  75.00%; padding:0;}
+	.col-d-10 {width:  83.33%; padding:0;}
+	.col-d-11 {width:  91.66%; padding:0;}
+	.col-d-12 {width: 100.00%; padding:0;}
+    
+    #indexPage{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        height: 25vh;
+    }
+    #indexPage a{
+        text-decoration: none;
+        text-align: center;
+        font-variant: small-caps;   
+        width: 100%;
+        opacity: 0;
+        -webkit-animation-name: indexTitle;
+                animation-name: indexTitle;
+        -webkit-animation-duration: 3s;
+                animation-duration: 3s;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+    }
+    @-webkit-keyframes indexTitle {
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    @keyframes indexTitle {
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    #indexPage h1{
+        font-size: 40px;
+    }
+    #indexPage h3{
+        font-size: 24px;
+    }
+    #militariaGalleryButton {
+        padding-bottom: 3vh;
+    }
+    #militariaGalleryButton > a {
+        background-image: url("gfx/rozmyte/bt65tuning_60.png");
+        height: 120px;
+    }
+    #motoryzacjaGalleryButton > a {
+        background-image: url("gfx/rozmyte/DSC_0036 (2)_60.png");
+        height: 120px;
+    }
+    .galleryButton{
+        padding: 3px;
+        padding-top:3vh;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-animation: fade_in 2s 1s forwards;
+                animation: fade_in 2s 1s forwards; 
+        opacity: 0;
+        margin-bottom: 10px;
+    }
+    @-webkit-keyframes fade_in{
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    @keyframes fade_in{
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    .galleryButton > a{
+        height: 120px;;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        -webkit-box-shadow: 0 0 28px 18px rgba(0,0,0,0.7) inset;
+                box-shadow: 0 0 28px 18px rgba(0,0,0,0.7) inset;
+        text-decoration: none;
+    }
+    .galleryButton > a > p{
+        text-align: center;   
+        line-height: 120px;;
+        font-size: 24px;
+        font-weight: normal;
+    }
+    .galleryButton > a:hover > p{
+        font-weight: bold;
+    }
+    .header {
+        line-height: 31px;
+    }
+    .header h1{
+        font-size: 18px;
+    }
+    .header h3{
+        font-size: 14px;
+    }
+    nav span{
+        display: none;
+    }
+    nav a:after{
+        line-height: 62px;
+    }
+    nav a:nth-child(1):after{
+        content: '🚗';
+    }
+    nav a:nth-child(2):after{
+        content: '🔫';
+    }
+    nav a:nth-child(3):after{
+        content: '✉️';
+    }
+}
+@media only screen and (max-width: 340px) {
+    .col-e-0  {width:   0.00%; padding: 0;}
+    .col-e-1  {width:   8.33%; padding:0;}
+	.col-e-2  {width:  16.66%; padding:0;}
+	.col-e-3  {width:  25.00%; padding:0;}
+	.col-e-4  {width:  33.33%; padding:0;}
+	.col-e-5  {width:  41.66%; padding:0;}
+	.col-e-6  {width:  50.00%; padding:0;}
+	.col-e-7  {width:  58.33%; padding:0;}
+	.col-e-8  {width:  66.66%; padding:0;}
+	.col-e-9  {width:  75.00%; padding:0;}
+	.col-e-10 {width:  83.33%; padding:0;}
+	.col-e-11 {width:  91.66%; padding:0;}
+	.col-e-12 {width: 100.00%; padding:0;}
+    
+    #indexPage{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    #indexPage a{
+        text-decoration: none;
+        text-align: center;
+        font-variant: small-caps;   
+        width: 100%;
+        opacity: 0;
+        -webkit-animation-name: indexTitle;
+                animation-name: indexTitle;
+        -webkit-animation-duration: 3s;
+                animation-duration: 3s;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+    }
+    @-webkit-keyframes indexTitle {
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    @keyframes indexTitle {
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    #indexPage h1{
+        font-size: 28px;
+    }
+    #indexPage h3{
+        font-size: 16px;
+    }
+    #militariaGalleryButton {
+        padding-bottom: 3vh;
+    }
+    #militariaGalleryButton > a {
+        background-image: url("gfx/rozmyte/bt65tuning_60.png");
+        height: 120px;
+    }
+    #motoryzacjaGalleryButton > a {
+        background-image: url("gfx/rozmyte/DSC_0036 (2)_60.png");
+        height: 120px;
+    }
+    .galleryButton{
+        padding: 3px;
+        padding-top:3vh;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-animation: fade_in 2s 1s forwards;
+                animation: fade_in 2s 1s forwards; 
+        opacity: 0;
+    }
+    @-webkit-keyframes fade_in{
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    @keyframes fade_in{
+        from {opacity: 0;}
+        to   {opacity: 1;}
+    }
+    .galleryButton > a{
+        height: 120px;;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        -webkit-box-shadow: 0 0 28px 18px rgba(0,0,0,0.7) inset;
+                box-shadow: 0 0 28px 18px rgba(0,0,0,0.7) inset;
+        text-decoration: none;
+    }
+    .galleryButton > a > p{
+        text-align: center;   
+        line-height: 120px;;
+        font-size: 16px;
+        font-weight: normal;
+    }
+    .galleryButton > a:hover > p{
+        font-weight: bold;
+    }
+    .head{
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 50px;
+                flex: 0 1 50px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        max-width: 1070px;
+    }
+    .header{
+        color: #e6e6e6;
+        font-variant: small-caps;
+        background-color: black;
+        height: 31px;
+        text-decoration: none;
+        line-height: 26px;
+    }
+    .header h1, .header h3{
+        text-align: center;
+        font-size: 22px;
+        padding-top:3px;
+    }
+    nav{
+        height: 31px;
+        background-color: black;
+        -webkit-box-shadow: 0px 5px 20px #000000;
+                box-shadow: 0px 5px 20px #000000;
+        border-top-right-radius: 10px;
+    }
+    nav span{
+        display: none;
+    }
+    nav a:after{
+        line-height: 31px;
+    }
+    nav a:nth-child(1):after{
+        font-family: "cars", truetype;
+        content: 'B';
+    }
+    nav a:nth-child(2):after{
+        font-family: "guns", truetype;
+        content: 'D';
+    }
+    nav a:nth-child(3):after{
+        content: '✉️';
+    }
+    .none340{
+        display: none;
+    }
+}

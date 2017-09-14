@@ -1,0 +1,66 @@
+#hydrografikaPage{
+        overflow-y: scroll;
+        background: rgba(0, 0, 0, 0.8);
+        flex: 1 1 auto;
+        margin-top: 77px;
+        background: transparent;
+}
+@media only screen and (min-width: 1270px) {
+}
+
+@media only screen and (min-width: 1150px) {
+    .col-1  {width:   8.33%; padding:0;}
+	.col-2  {width:  16.66%; padding:0;}
+	.col-3  {width:  25.00%; padding:0;}
+	.col-4  {width:  33.33%; padding:0;}
+	.col-5  {width:  41.66%; padding:0;}
+	.col-6  {width:  50.00%; padding:0;}
+	.col-7  {width:  58.33%; padding:0;}
+	.col-8  {width:  66.66%; padding:0;}
+	.col-9  {width:  75.00%; padding:0;}
+	.col-10 {width:  83.33%; padding:0;}
+	.col-11 {width:  91.66%; padding:0;}
+    .col-12 {width: 100.00%; padding:0;}
+    
+    #hydrografikaPage{
+        padding: 30px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    #hydrografikaPage h2{
+        padding: 20px;
+        padding-left: 0px;
+    }
+    #hydrografikaPage p{
+        text-align: justify;
+    }
+}
+@media only screen and (max-width: 1150px) {
+    .col-a-1  {width:   8.33%; padding:0;}
+	.col-a-2  {width:  16.66%; padding:0;}
+	.col-a-3  {width:  25.00%; padding:0;}
+	.col-a-4  {width:  33.33%; padding:0;}
+	.col-a-5  {width:  41.66%; padding:0;}
+	.col-a-6  {width:  50.00%; padding:0;}
+	.col-a-7  {width:  58.33%; padding:0;}
+	.col-a-8  {width:  66.66%; padding:0;}
+	.col-a-9  {width:  75.00%; padding:0;}
+	.col-a-10 {width:  83.33%; padding:0;}
+	.col-a-11 {width:  91.66%; padding:0;}
+    .col-a-12 {width: 100.00%; padding:0;}
+    
+    #hydrografikaPage{
+        padding: 30px;
+        padding-top: 0px;
+    }
+    #hydrografikaPage h2{
+        padding: 20px;
+        padding-left: 0px;
+        font-size: 18px;
+    }
+    #hydrografikaPage p{
+        text-align: justify;
+        font-size: 14px;
+    }
+}

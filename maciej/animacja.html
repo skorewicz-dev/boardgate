@@ -1,0 +1,37 @@
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes backgroundColor {
+    from {background-color: black;}
+    to { /* IE10+ */ 
+    background-image: -ms-radial-gradient(center, ellipse closest-corner, #FFFFFF 0%, #000000 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-radial-gradient(center, ellipse closest-corner, #FFFFFF 0%, #000000 100%);
+
+    /* Opera */ 
+    background-image: -o-radial-gradient(center, ellipse closest-corner, #FFFFFF 0%, #000000 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(radial, center center, 0, center center, 286, color-stop(0, #FFFFFF), color-stop(100, #000000));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-radial-gradient(center, ellipse closest-corner, #FFFFFF 0%, #000000 100%);}
+}
+
+/* Standard syntax */
+@keyframes backgroundColor {
+    from {background-color: black;}
+    to { /* IE10+ */ 
+    background-image: -ms-radial-gradient(center, ellipse closest-corner, #FFFFFF 0%, #000000 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-radial-gradient(center, ellipse closest-corner, #FFFFFF 0%, #000000 100%);
+
+    /* Opera */ 
+    background-image: -o-radial-gradient(center, ellipse closest-corner, #FFFFFF 0%, #000000 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(radial, center center, 0, center center, 286, color-stop(0, #FFFFFF), color-stop(100, #000000));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-radial-gradient(center, ellipse closest-corner, #FFFFFF 0%, #000000 100%);}
+}

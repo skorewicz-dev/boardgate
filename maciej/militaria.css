@@ -1,0 +1,228 @@
+#militariaPage{
+        overflow-y: scroll;
+        background: rgba(0, 0, 0, 0.8);
+        flex: 0 1 auto;
+        margin-top: 77px;
+        background: transparent;
+}
+@media only screen and (min-width: 1270px) {
+}
+
+@media only screen and (min-width: 1150px) {
+    .col-1  {width:   8.33%; padding:0;}
+	.col-2  {width:  16.66%; padding:0;}
+	.col-3  {width:  25.00%; padding:0;}
+	.col-4  {width:  33.33%; padding:0;}
+	.col-5  {width:  41.66%; padding:0;}
+	.col-6  {width:  50.00%; padding:0;}
+	.col-7  {width:  58.33%; padding:0;}
+	.col-8  {width:  66.66%; padding:0;}
+	.col-9  {width:  75.00%; padding:0;}
+	.col-10 {width:  83.33%; padding:0;}
+	.col-11 {width:  91.66%; padding:0;}
+    .col-12 {width: 100.00%; padding:0;}
+    
+    #militariaPage{
+        padding:0;
+        padding-bottom:15px;
+	}
+	.flyingImage{
+		display: inline-block;
+		width: 28%;
+		margin-left: 3.5%;
+		margin-top:15px;
+		border-radius: 5px;
+		cursor:pointer;
+        border: 1px solid transparent;
+	}
+	.flyingImage:hover{
+        box-shadow: 0px 0px 15px white;
+		border-radius:10px;
+        cursor:pointer;
+        transition: all 0.2s;
+        border: 1px solid white;
+        filter: grayscale(0%);
+    }
+}
+@media only screen and (max-width: 1150px) {
+    .col-a-1  {width:   8.33%; padding:0;}
+	.col-a-2  {width:  16.66%; padding:0;}
+	.col-a-3  {width:  25.00%; padding:0;}
+	.col-a-4  {width:  33.33%; padding:0;}
+	.col-a-5  {width:  41.66%; padding:0;}
+	.col-a-6  {width:  50.00%; padding:0;}
+	.col-a-7  {width:  58.33%; padding:0;}
+	.col-a-8  {width:  66.66%; padding:0;}
+	.col-a-9  {width:  75.00%; padding:0;}
+	.col-a-10 {width:  83.33%; padding:0;}
+	.col-a-11 {width:  91.66%; padding:0;}
+    .col-a-12 {width: 100.00%; padding:0;}
+    
+    #militariaPage{
+        padding:0;
+        padding-bottom:15px;
+	}
+	.flyingImage{
+		display: inline-block;
+		width: 28%;
+		margin-left: 3.5%;
+		margin-top:15px;
+		border-radius: 5px;
+		cursor:pointer;
+        border: 1px solid transparent;
+	}
+	.flyingImage:hover{
+        box-shadow: 0px 0px 15px white;
+		border-radius:10px;
+        cursor:pointer;
+        transition: all 0.2s;
+        border: 1px solid white;
+        filter: grayscale(0%);
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .col-a-1  {width:   8.33%; padding:0;}
+	.col-a-2  {width:  16.66%; padding:0;}
+	.col-a-3  {width:  25.00%; padding:0;}
+	.col-a-4  {width:  33.33%; padding:0;}
+	.col-a-5  {width:  41.66%; padding:0;}
+	.col-a-6  {width:  50.00%; padding:0;}
+	.col-a-7  {width:  58.33%; padding:0;}
+	.col-a-8  {width:  66.66%; padding:0;}
+	.col-a-9  {width:  75.00%; padding:0;}
+	.col-a-10 {width:  83.33%; padding:0;}
+	.col-a-11 {width:  91.66%; padding:0;}
+    .col-a-12 {width: 100.00%; padding:0;}
+    
+    #militariaPage{
+        padding:0;
+        padding-bottom:15px;
+	}
+	.flyingImage{
+		display: inline-block;
+		width: 28%;
+		margin-left: 3.5%;
+		margin-top:15px;
+		border-radius: 5px;
+		cursor:pointer;
+        border: 1px solid transparent;
+	}
+	.flyingImage:hover{
+        box-shadow: 0px 0px 15px white;
+		border-radius:10px;
+        cursor:pointer;
+        transition: all 0.2s;
+        border: 1px solid white;
+        filter: grayscale(0%);
+    }
+}
+@media only screen and (max-width: 650px) {
+    .col-a-1  {width:   8.33%; padding:0;}
+	.col-a-2  {width:  16.66%; padding:0;}
+	.col-a-3  {width:  25.00%; padding:0;}
+	.col-a-4  {width:  33.33%; padding:0;}
+	.col-a-5  {width:  41.66%; padding:0;}
+	.col-a-6  {width:  50.00%; padding:0;}
+	.col-a-7  {width:  58.33%; padding:0;}
+	.col-a-8  {width:  66.66%; padding:0;}
+	.col-a-9  {width:  75.00%; padding:0;}
+	.col-a-10 {width:  83.33%; padding:0;}
+	.col-a-11 {width:  91.66%; padding:0;}
+    .col-a-12 {width: 100.00%; padding:0;}
+    
+    #militariaPage{
+        padding:0;
+        padding-bottom:15px;
+	}
+	.flyingImage{
+		display: inline-block;
+		width: 42.5%;
+		margin: 4.5%;
+		margin-top:15px;
+		border-radius: 5px;
+		cursor:pointer;
+        border: 1px solid transparent;
+	}
+	.flyingImage:nth-child(even){
+		margin-left:0;
+	}
+	.flyingImage:hover{
+        box-shadow: 0px 0px 15px white;
+		border-radius:10px;
+        cursor:pointer;
+        transition: all 0.2s;
+        border: 1px solid white;
+        filter: grayscale(0%);
+    }
+}
+@media only screen and (max-width: 545px) {
+    .col-c-1  {width:   8.33%; padding:0;}
+	.col-c-2  {width:  16.66%; padding:0;}
+	.col-c-3  {width:  25.00%; padding:0;}
+	.col-c-4  {width:  33.33%; padding:0;}
+	.col-c-5  {width:  41.66%; padding:0;}
+	.col-c-6  {width:  50.00%; padding:0;}
+	.col-c-7  {width:  58.33%; padding:0;}
+	.col-c-8  {width:  66.66%; padding:0;}
+	.col-c-9  {width:  75.00%; padding:0;}
+	.col-c-10 {width:  83.33%; padding:0;}
+	.col-c-11 {width:  91.66%; padding:0;}
+	.col-c-12 {width: 100.00%; padding:0;}
+}
+
+@media only screen and (max-width: 450px) {
+    .col-d-1  {width:   8.33%; padding:0;}
+	.col-d-2  {width:  16.66%; padding:0;}
+	.col-d-3  {width:  25.00%; padding:0;}
+	.col-d-4  {width:  33.33%; padding:0;}
+	.col-d-5  {width:  41.66%; padding:0;}
+	.col-d-6  {width:  50.00%; padding:0;}
+	.col-d-7  {width:  58.33%; padding:0;}
+	.col-d-8  {width:  66.66%; padding:0;}
+	.col-d-9  {width:  75.00%; padding:0;}
+	.col-d-10 {width:  83.33%; padding:0;}
+	.col-d-11 {width:  91.66%; padding:0;}
+	.col-d-12 {width: 100.00%; padding:0;}
+
+	#militariaPage{
+        padding:0;
+        padding-bottom:15px;
+	}
+	.flyingImage{
+		display: inline-block;
+		width: 80%;
+		margin: 10%;
+		margin-top:13px;
+		margin-bottom: 13px;
+		border-radius: 5px;
+		cursor:pointer;
+        border: 1px solid transparent;
+	}
+	.flyingImage:nth-child(even){
+		margin-left:10%;
+	}
+	.flyingImage:hover{
+        box-shadow: 0px 0px 15px white;
+		border-radius:10px;
+        cursor:pointer;
+        transition: all 0.2s;
+        border: 1px solid white;
+        filter: grayscale(0%);
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .col-e-1  {width:   8.33%; padding:0;}
+	.col-e-2  {width:  16.66%; padding:0;}
+	.col-e-3  {width:  25.00%; padding:0;}
+	.col-e-4  {width:  33.33%; padding:0;}
+	.col-e-5  {width:  41.66%; padding:0;}
+	.col-e-6  {width:  50.00%; padding:0;}
+	.col-e-7  {width:  58.33%; padding:0;}
+	.col-e-8  {width:  66.66%; padding:0;}
+	.col-e-9  {width:  75.00%; padding:0;}
+	.col-e-10 {width:  83.33%; padding:0;}
+	.col-e-11 {width:  91.66%; padding:0;}
+	.col-e-12 {width: 100.00%; padding:0;}
+}
