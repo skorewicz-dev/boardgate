@@ -667,10 +667,12 @@ nav a:hover{
         line-height: 62px;
     }
     nav a:nth-child(1):after{
-        content: '🚗';
+        font-family: "cars", truetype;
+        content: 'B';
     }
     nav a:nth-child(2):after{
-        content: '🔫';
+        font-family: "guns", truetype;
+        content: 'D';
     }
     nav a:nth-child(3):after{
         content: '✉️';
@@ -792,10 +794,12 @@ nav a:hover{
         line-height: 62px;
     }
     nav a:nth-child(1):after{
-        content: '🚗';
+        font-family: "cars", truetype;
+        content: 'B';
     }
     nav a:nth-child(2):after{
-        content: '🔫';
+        font-family: "guns", truetype;
+        content: 'D';
     }
     nav a:nth-child(3):after{
         content: '✉️';
