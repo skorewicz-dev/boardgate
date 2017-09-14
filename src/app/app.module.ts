@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { LobbyComponent } from './lobby/lobby.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent } from './about/about.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LobbyComponent,
     WelcomeComponent,
-    AboutComponent
+    AboutComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +24,7 @@ import { AboutComponent } from './about/about.component';
       {path: 'lobby', component: LobbyComponent },
       {path: 'about', component: AboutComponent },
       {path: 'welcome', component: WelcomeComponent },
+      {path: 'login', component: LoginFormComponent },
       {path: '', redirectTo: '/welcome', pathMatch: 'full'}
     ])
   ],
