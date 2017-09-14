@@ -86,3 +86,7 @@ input:-ms-input-placeholder{
 .short{
     width: 100px !important;
 }
+span.red {
+    color: red;
+    text-shadow: none;
+}
