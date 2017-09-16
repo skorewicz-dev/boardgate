@@ -1,9 +1,9 @@
 #motoryzacjaPage{
-	overflow-y: scroll;
 	background: rgba(0, 0, 0, 0.8);
 	flex: 1 1 auto;
 	margin-top: 77px;
 	background: transparent;
+	overflow-y: scroll;
 }
 
 @media only screen and (min-width: 1150px) {

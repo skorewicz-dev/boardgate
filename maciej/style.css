@@ -19,6 +19,9 @@
 	    -ms-user-select: none;
 	        user-select: none;
 }
+html, body{
+    overflow: hidden;
+}
 [class*="col-"] {
     float: left;
     padding: 15px;
@@ -63,6 +66,7 @@
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
+            overflow: hidden;
 }
 .head{
     -webkit-box-flex: 0;

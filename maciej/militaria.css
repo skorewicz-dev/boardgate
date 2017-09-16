@@ -1,7 +1,7 @@
 #militariaPage{
-        overflow-y: scroll;
+		overflow-y: auto;
         background: rgba(0, 0, 0, 0.8);
-        flex: 0 1 auto;
+		flex: 0 1 auto;
         margin-top: 77px;
         background: transparent;
 }
